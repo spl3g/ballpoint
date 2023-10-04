@@ -23,11 +23,8 @@ def degree(
         str - error
     """
     if radius <= 0 or time <= 0:
-        return "Radius or time are less or equal than 0"
+        return 'Radius or time are less or equal than 0'
     full_circle = 360
     distance = velocity * time + (acceleration * time ** 2) / 2
     length = 2 * pi * radius
-    return round((distance % (length or 1)) / (length or 1) * full_circle, 2)
-
-
-print(degree(1, 1, 1, 0))
+    return round((distance % length) / length * full_circle, 2)

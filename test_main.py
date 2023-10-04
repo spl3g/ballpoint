@@ -1,3 +1,4 @@
+"""Pytest function."""
 import pytest
 
 from main import degree
@@ -14,11 +15,11 @@ CIRCLES = (
     CIRCLES,
 )
 def test_degree(
-        radius: float,
-        acceleration: float,
-        time: float,
-        velocity: float,
-        expected: float | str,
+    radius: float,
+    acceleration: float,
+    time: float,
+    velocity: float,
+    expected: float | str,
 ) -> None:
     """
     Tests for the degree function.
