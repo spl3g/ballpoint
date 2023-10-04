@@ -21,4 +21,7 @@ def ball(radius: float, acceleration: float, time: float, velocity: float = 0) -
     angle = math.atan(distance / radius)
     balls = math.degrees(angle)
 
+    if radius <= 0 or time <= 0:
+        return 0
+    
     return round(balls, 2)
